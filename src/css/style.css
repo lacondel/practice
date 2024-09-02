@@ -11,13 +11,21 @@ body {
     background-color: #f0f2f5;
     color: #333;
     line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 /* Контейнер для контента */
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
     padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Центрируем текст внутри контейнера */
 }
 
 /* Заголовки */
@@ -38,10 +46,6 @@ a:hover {
 
 /* Стили для форм */
 form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
@@ -50,7 +54,7 @@ input[type="text"],
 input[type="password"],
 input[type="submit"],
 button {
-    width: 100%;
+    width: calc(100% - 22px); /* Учитываем отступы */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
@@ -84,5 +88,4 @@ input[type="submit"]:hover {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
