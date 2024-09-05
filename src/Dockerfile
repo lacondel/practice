@@ -1,5 +1,5 @@
 # Указываем базовый образ
-FROM php:7.4-apache
+FROM php:8.2-apache
 
 # Устанавливаем дополнительные пакеты
 RUN apt-get update \
