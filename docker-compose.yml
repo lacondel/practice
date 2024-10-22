@@ -5,13 +5,11 @@ services:
     build: ./src
     ports:
       - "80:80"
-    # Определяем переменные окружения для контейнера (для подключения к бд)
     environment: 
       - DB_HOST=db
       - DB_USER=root
       - DB_PASSWORD=root
-      - DB_NAME=lacondel_db
-    # Указываем, что данный сервис зависит от сервиса db
+      - DB_NAME=practice_db
     depends_on:
       - db
   db:
@@ -23,8 +21,6 @@ services:
       - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=practice_db
 
-# Создаем том, для хранения данных вне контейнера
 volumes:
   practice-data:

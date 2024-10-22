@@ -11,8 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $stmt = $pdo->prepare("INSERT INTO users (user_login, user_password) VALUES (?, ?)");
         if ($stmt->execute([$login, $passwordHash])) {
-            $_SESSION['user_login'] = $login;
-            header('Location: welcome.php');
+            header('Location: index.php');
             exit;
         } else {
             $error = 'Ошибка регистрации. Попробуйте снова.';

@@ -1,8 +1,8 @@
 <?php
-$host = 'db';
-$db   = 'practice_db';
-$user = 'root';
-$pass = 'root';
+$host = getenv('DB_HOST');
+$db   = getenv('DB_NAME');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASSWORD');
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
